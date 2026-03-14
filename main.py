@@ -57,15 +57,15 @@ class Database:
     def store(self, extracted):
         row = extracted.split(",")
         row = [item.strip() for item in row]
-        cursor = connection.cursor()
+        cursor = self.connection.cursor()
         cursor.execute("INSERT INTO events VALUES(?, ?, ?)", row)
-        connection.commit()
+        self.connection.commit()
 
     def read(self, extracted):
         row = extracted.split(",")
         row = [item.strip() for item in row]
         band, city, date = row
-        cursor = connection.cursor()
+        cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM events WHERE band=? AND city=? AND date=?", (band, city, date))
         rows = cursor.fetchall()
         print(rows)
