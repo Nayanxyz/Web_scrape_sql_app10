@@ -85,4 +85,4 @@ if __name__ == "__main__":
                 database.store(extracted)
                 email = Email()
                 email.send(message="Hey, new event is found")
-            time.sleep(2)
+            time.sleep(2)  # 2 seconds
