@@ -1,0 +1,22 @@
+1. The Core Libraries
+
+    requests: A standard third-party library used to send HTTP requests to servers.
+                Used in this script to fetch the raw HTML source code from the target URL.
+
+    selectorlib: A data extraction library that reads HTML and extracts specific text based on a pre-defined
+                YAML configuration file. Used here to locate and pull the specific tour data from the messy HTML.
+
+    smtplib: A built-in protocol client used to send emails routing between mail servers.
+                Used here to connect to Google's SMTP server.
+
+    ssl: A security library that provides encryption. Used here to wrap the SMTP connection so
+            the email contents and login credentials are encrypted in transit.
+
+    os: A system library for interacting with the operating system.
+        It is imported on line 4 but completely unused in the script.
+
+    time: A time-access library. Used here strictly for the time.sleep(2) function to force
+            the infinite loop to pause for two seconds, preventing the script from launching
+            a Denial of Service (DoS) attack on the target website.
+
+    sqlite3: The built-in database engine used to read and write to the local data.db file.
