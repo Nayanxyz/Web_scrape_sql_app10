@@ -8,4 +8,8 @@ An automated, persistent Python script designed to monitor target web pages for 
 * **Persistent Storage (Model):** Integrates Python's built-in `sqlite3` to maintain a historical ledger of processed events, ensuring notifications are only dispatched for mathematically unique records.
 * **Notification Dispatcher:** Establishes a secure `SMTP_SSL` connection to transmit encrypted alerts to a designated email address.
 
+## 🛠️ Tech Stack
+* **Language:** Python 3.10+
+* **Libraries:** `requests`, `selectorlib`, `smtplib`, `ssl`, `sqlite3`, `time`
+
 
