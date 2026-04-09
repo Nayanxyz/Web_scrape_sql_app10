@@ -25,7 +25,7 @@ class Event:                                                                  # 
         return value
 
 class Email:
-    def send(seld, message):
+    def send(self, message):
         host = "smtp.gmail.com"
         port = 465
 
