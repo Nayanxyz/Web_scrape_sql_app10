@@ -42,3 +42,17 @@
                 establishes a secure connection to Gmail, logs in, dispatches the provided string
                 message to the receiver, and prints a console confirmation.
 
+    Class: Database
+
+        Definition: The management class for persistent local data storage.
+
+        Method: __init__(self, database_path): Automatically executes upon instantiation.
+                It opens a live pipeline (sqlite3.connect) to the specified database file.
+
+        Method: store(self, extracted): Takes the scraped text, splits it into a list based on commas,
+                strips away excess whitespace, and inserts the clean variables into the events SQL table.
+                It then commits the save.
+
+        Method: read(self, extracted): Takes the scraped text, formats it identically to the store method,
+                and queries the database (SELECT * FROM events...) to see if an exact match already exists.
+                 It returns the database rows if a match is found, preventing duplicate notifications.
