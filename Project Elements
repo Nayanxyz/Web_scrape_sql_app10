@@ -34,3 +34,11 @@
                 the selectorlib extractor using the extract.yaml blueprint, and returns
                 the cleaned string (e.g., "Band, City, Date").
 
+    Class: Email
+
+        Definition: A wrapper designed to handle outbound notifications.
+
+        Method: send(self, message): Hardcodes the SMTP server details and credentials,
+                establishes a secure connection to Gmail, logs in, dispatches the provided string
+                message to the receiver, and prints a console confirmation.
+
