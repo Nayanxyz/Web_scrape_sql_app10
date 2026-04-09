@@ -12,4 +12,21 @@ An automated, persistent Python script designed to monitor target web pages for 
 * **Language:** Python 3.10+
 * **Libraries:** `requests`, `selectorlib`, `smtplib`, `ssl`, `sqlite3`, `time`
 
+## 🚀 Installation & Execution
+
+Follow these strict guidelines to deploy the monitoring system safely.
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Nayanxyz/Web_scrape_sql_app10.git
+cd Web_scrape_sql_app10
+```
+### 2. Install Dependencies
+```bash
+pip install requests selectorlib
+```
+### 3. Execute
+```bash
+python main.py
+```
 
