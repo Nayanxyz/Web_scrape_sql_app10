@@ -20,3 +20,17 @@
             a Denial of Service (DoS) attack on the target website.
 
     sqlite3: The built-in database engine used to read and write to the local data.db file.
+
+2. The Classes and Methods
+
+    Class: Event
+
+        Definition: A wrapper designed to handle the acquisition and parsing of web data.
+
+        Method: scrape(self, url): Takes a web address, spoofs a browser "User-Agent"
+                to bypass basic bot-blockers, downloads the page's HTML, and returns the raw text.
+
+        Method: extract(self, source): Takes the raw HTML text, feeds it into
+                the selectorlib extractor using the extract.yaml blueprint, and returns
+                the cleaned string (e.g., "Band, City, Date").
+
